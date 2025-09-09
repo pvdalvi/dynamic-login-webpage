@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register - Intellectra</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .password-toggle {
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+    }
+    .position-relative { position: relative; }
+    #passwordCriteria { font-size: 0.9rem; margin-top: 5px; }
+    .feedback { font-size: 0.85rem; margin-top: 3px; }
+  </style>
+</head>
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Intellectra</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto" id="navbar"></ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <!-- Login Card -->
+      <div class="card shadow-sm" id="loginCard">
+        <div class="card-body">
+          <h3 class="text-center mb-4">Login</h3>
+          <form id="loginForm">
+            <div class="mb-3">
+              <label>Email</label>
+              <input type="email" class="form-control" id="loginEmail" required>
+              <div class="feedback text-danger" id="loginEmailFeedback"></div>
+            </div>
+
+            <div class="mb-3 position-relative">
+              <label>Password</label>
+              <input type="password" class="form-control" id="loginPassword" required>
+              <span class="password-toggle" id="loginToggle" onclick="togglePassword('loginPassword','loginToggle')">👁</span>
+              <div class="feedback text-danger" id="loginPasswordFeedback"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+          <p class="text-center mt-3">Don't have an account? <a href="?page=register">Register</a></p>
+        </div>
+      </div>
+
+      <!-- Register Card -->
+      <div class="card shadow-sm d-none" id="registerCard">
+        <div class="card-body">
+          <h3 class="text-center mb-4">Register</h3>
+          <form id="registerForm">
+            <div class="mb-3">
+              <label>Full Name</label>
+              <input type="text" class="form-control" id="regName" required>
+              <div class="feedback text-danger" id="nameFeedback"></div>
+            </div>
+            <div class="mb-3">
+              <label>Email</label>
+              <input type="email" class="form-control" id="regEmail" required>
+              <div class="feedback text-danger" id="emailFeedback"></div>
+            </div>
+            <div class="mb-3 position-relative">
+              <label>Password</label>
+              <input type="password" class="form-control" id="regPassword" required>
+              <span class="password-toggle" id="regToggle" onclick="togglePassword('regPassword','regToggle')">👁</span>
+              <div id="passwordCriteria">
+                <div id="length" data-text="At least 8 characters">❌ At least 8 characters</div>
+                <div id="uppercase" data-text="One uppercase letter">❌ One uppercase letter</div>
+                <div id="lowercase" data-text="One lowercase letter">❌ One lowercase letter</div>
+                <div id="number" data-text="One number">❌ One number</div>
+                <div id="special" data-text="One special character (@$!%*?&)">❌ One special character (@$!%*?&)</div>
+              </div>
+              <div class="feedback text-danger" id="passwordFeedback"></div>
+            </div>
+            <div class="mb-3">
+              <label>About Me</label>
+              <textarea class="form-control" id="regAbout" maxlength="200"></textarea>
+              <div class="feedback text-muted" id="aboutFeedback">0/200 characters</div>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Register</button>
+          </form>
+          <p class="text-center mt-3">Already have an account? <a href="?page=login">Login</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
