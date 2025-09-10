@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "f610",
+      "name": "prajakta",
+      "email": "dalvipv27@gmail.com",
+      "password": "Prajakta@123",
+      "about": "I am doing my task"
+    },
+    {
+      "id": "f610",
+      "name": "Advaitha",
+      "email": "advaitha@gmail.com",
+      "password": "Prajakta@123",
+      "about": "I am doing my task"
+    }
+  ]
+}
