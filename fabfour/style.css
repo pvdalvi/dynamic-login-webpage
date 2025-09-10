@@ -1,0 +1,8 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color:#f8f9fa; }
+.card{ border-radius:12px; transition:transform 0.2s, box-shadow 0.2s; }
+.card:hover{ transform: translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+.btn{ border-radius:8px; font-weight:500; }
+.feedback{ font-size:0.85rem; }
+#passwordCriteria div{ margin:2px 0; }
+textarea{ resize:none; }
+a:hover{ text-decoration:underline; }
